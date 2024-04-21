@@ -29,7 +29,7 @@ const ChatSidebar = async () => {
                 </div>
             </div>
             <div className='p-2 overflow-y-auto'>
-                {/* <SearchBar/> */}
+                <SearchBar/>
                 <Suspense fallback={<FriendSkeleton />}>
                     <Friends/>
                 </Suspense>
