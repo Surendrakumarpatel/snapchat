@@ -49,6 +49,7 @@ export const sendSnapMessage = async (
         return JSON.parse(JSON.stringify(newMessage));
     } catch (error) {
         console.log(error);
+        throw error;
     }
 }
 
@@ -73,6 +74,7 @@ export const deleteChatMessages = async (userId:string) => {
         revalidatePath(`/chat/${userId}`); 
     } catch (error) {
         console.log(error);
+        throw error;
     }
     redirect("/chat");
 }

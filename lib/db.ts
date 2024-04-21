@@ -14,6 +14,7 @@ const connectDB = async () => {
         return isConnected;
     } catch (error) {
         console.log(error);
+        throw error;
     }
 }
 export default connectDB;

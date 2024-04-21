@@ -13,6 +13,7 @@ export const getUserProfile = async (userId:string) => {
         return user; 
     } catch (error) {
         console.log(error);
+        throw error;
     }   
 };
 
@@ -48,6 +49,7 @@ export const getSidebarUsers = async (authUserId: string) => {
         return userInfo;
     } catch (error) {
         console.log(error);
+        throw error;
     }
 }
 export const getMessages = async (loggedInUserId:string, otherUserId:string ) => {
@@ -67,6 +69,6 @@ export const getMessages = async (loggedInUserId:string, otherUserId:string ) =>
          return JSON.parse(JSON.stringify(chatMessage.messages)) ;
     } catch (error) {
         console.log(error);
-        
+        throw error;
     }
 }
