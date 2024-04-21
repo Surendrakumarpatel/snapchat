@@ -63,12 +63,16 @@ const ChatBody = ({ messages, authUser }: { messages: any, authUser: any }) => {
         onOpenChange={() => setPreviewImage({ open: false, imgURL: "" })}
       >
         <DialogContent autoFocus={false} className='max-w-2xl h-96'>
-          <Image
-            className='border-2 border-white rounded-lg'
-            src={previewImage.imgURL}
-            alt={'img'}
-            fill
-          />
+          {
+            previewImage.imgURL && (
+              <Image
+                className='border-2 border-white rounded-lg'
+                src={previewImage.imgURL}
+                alt={'img'}
+                fill={true}
+              />
+            )
+          }
         </DialogContent>
       </Dialog>
     </div>

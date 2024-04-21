@@ -11,6 +11,11 @@ const nextConfig = {
                 hostname:'res.cloudinary.com'
             },
         ]
+    },
+    experimental:{
+        serverActions:{
+            bodySizeLimit:'2mb'
+        }
     }
 };
 
